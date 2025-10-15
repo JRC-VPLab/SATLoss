@@ -4,7 +4,7 @@
 
 arXiv: [link](https://arxiv.org/abs/2412.02076);   ICCV Proceedings: Comming soon.
 
-Original Github page: [bw05025](https://github.com/bw05025/SATLoss)
+Original Github page: [bw](https://github.com/bw05025/SATLoss)
 
 ### Introduction
 Topology-preserving image segmentation loss function for curvilinear structure segmentation with spatially-aware persistent feature matching leveraging critical cell locations. Prior work (BMLoss) addressing similar topological feature matching accuracy issue is computationally expensive (O(n³) time complexity, n is number of pixels in an image) and is impractical for many applications. Our method introduces no additional complexity to computing the persistent homology (O(nlog(n))). While achieving comparable performance, it is much more efficient and allows wider applications.
