@@ -36,7 +36,7 @@ class PDMatchingLoss(nn.Module):
 
     def _pre_compute_PD(self, target, img_names):
         """
-            Pre-compute and save the
+            Pre-compute PD for ground truth and save the training time.
         """
         # pad the boundary of the images by 1
         padded_target = F.pad(target, self.pad_dims, mode='constant', value=1)
