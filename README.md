@@ -6,7 +6,26 @@ arXiv: [link](https://arxiv.org/abs/2412.02076);   ICCV Proceedings: Comming soo
 
 Original Github page: [bw05025](https://github.com/bw05025/SATLoss)
 
-### Dependencies:
+### Introduction
+Topology-preserving image segmentation loss function for curvilinear structure segmentation with spatially-aware persistent feature matching leveraging critical cell locations. Prior work (BMLoss) addressing similar topological feature matching accuracy issue is computationally expensive (O(n³) time complexity, n is number of pixels in an image) and is impractical for many applications. Our method introduces no additional complexity to computing the persistent homology (O(nlog(n))). While achieving comparable performance, it is much more efficient and allows wider applications.
+A high-level overview:
+![Method high-level overview](_github/Overview.png)
+
+Matching examples (0/1-persistent features):
+![matching_examples](_github/matching.png)
+
+Final segmentation examples:
+![segmentation_examples](_github/segmentation.png)
+
+### SATLoss Implementation
+For implementation of the Spatial-Aware Topological Loss (SATLoss), check `PDMatchingLoss` in `./utils/losses.py` and `SpatialAware_WassersteinDistance` in `./utils/PDMatching.py`.
+
+
+
+
+
+### Run The Code
+Dependencies:
 <pre>
 python==3.9.18
 torch==2.1.0
@@ -18,10 +37,6 @@ torch-topological==0.1.7
 POT==0.8.2
 </pre>
 
-### SATLoss
-For implementation of the Spatial-Aware Topological Loss (SATLoss), check `PDMatchingLoss` in `./utils/losses.py` and `SpatialAware_WassersteinDistance` in `./utils/PDMatching.py`.
-
-### Run The Code
 To train using the topological loss:
 <pre>
 python3 run.py --expmode train --dataset dataset_name --exp note_for_this_run
