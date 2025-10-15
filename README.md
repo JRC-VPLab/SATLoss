@@ -1,16 +1,51 @@
 # SATLoss
 
-## Topology-Preserving Image Segmentation with Spatial-Aware Persistent Feature Matching (ICCV Workshop 2025)
+## Topology-Preserving Image Segmentation with Spatial-Aware Persistent Feature Matching
+
+arXiv: [link](https://arxiv.org/abs/2412.02076);   ICCV Proceedings: Comming soon.
+
 Original Github page: [bw05025](https://github.com/bw05025/SATLoss)
 
-Python environment:
+### Dependencies:
 <pre>
-  python=3.9.18
-  torch=2.1.0
-  numpy=1.26.0
-  scikit-image=0.24.0
-  opencv-python=4.8.1.78
-  gudhi=3.9.0
-  torch-topological=0.1.7
-  POT=0.8.2
+python==3.9.18
+torch==2.1.0
+numpy==1.26.0
+scikit-image==0.24.0
+opencv-python==4.8.1.78
+gudhi==3.9.0
+torch-topological==0.1.7
+POT==0.8.2
 </pre>
+
+### SATLoss
+For implementation of the Spatial-Aware Topological Loss (SATLoss), check `PDMatchingLoss` in `./utils/losses.py` and `SpatialAware_WassersteinDistance` in `./utils/PDMatching.py`.
+
+### Run The Code
+To train using the topological loss:
+<pre>
+python3 run.py --expmode train --dataset dataset_name --exp note_for_this_run
+</pre>
+Hyperparamters varies from dataset to dataset, check paper and modify via parser in `run.py`.
+
+To run inference:
+<pre>
+python3 run.py --expmode test --dataset dataset_name --exp note_for_this_run
+</pre>
+
+Checkpoints and results are saved to `./exp/note_for_this_run`.
+
+### Data Organization
+Put images and labels (support any format cv2.imread can read) of respective set (train/val/test) into `./data/dataset_name/set`. An example is provided in `./data`.
+
+`dataset_name` needs to be the same with `--dataset_name xxx` when runing `run.py`.
+
+Names of corresponding input images and labels need to be the same.
+
+
+
+
+
+
+
+
