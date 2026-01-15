@@ -2,7 +2,7 @@
 
 ## Topology-Preserving Image Segmentation with Spatial-Aware Persistent Feature Matching
 
-arXiv: [link](https://arxiv.org/abs/2412.02076);   ICCV Proceedings: Comming soon.
+arXiv: [link](https://arxiv.org/abs/2412.02076);   ICCV Proceedings: [link](https://openaccess.thecvf.com/content/ICCV2025W/BIC/papers/Wen_Topology-Preserving_Image_Segmentation_with_Spatial-Aware_Persistent_Feature_Matching_ICCVW_2025_paper.pdf).
 
 Original Github page: [bw](https://github.com/bw05025/SATLoss)
 
